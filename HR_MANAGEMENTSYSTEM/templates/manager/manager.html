@@ -1,0 +1,31 @@
+{% extends 'common.html' %}
+{% block body_part %}
+
+
+
+        <form action="{% url 'manager_login' %}" method="post">
+        {% csrf_token %}
+        <table align="center">
+            <tr>
+                <th>
+                    <h2>Manager Login Page</h2>
+                </th>
+            </tr>
+            <tr><th>
+               <input type="text" class="form-control" placeholder="User Name" name="t1">
+           </th></tr>
+           <tr><th>
+
+              <input type="password" class="form-control" id="exampleDropdownFormEmail2" placeholder="passwod" name="t2">
+          <tr><th>
+            <tr style="text-align: center">
+               <th>
+                <button type="submit" class="btn btn-primary">Sign in</button>
+               </th>
+             </tr>
+
+         </table>
+        </form>
+
+
+{% endblock %}

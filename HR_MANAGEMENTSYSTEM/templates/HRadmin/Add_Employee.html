@@ -1,0 +1,8 @@
+{% extends 'HRadmin/commonADMIN.html' %}
+{% block Admin_body %}
+    <form action="{% url 'save_emp' %}" method="post">
+      {% csrf_token %}
+       {{ ef.as_p }}
+       <button type="submit">Submit</button>
+    </form>
+{% endblock %}

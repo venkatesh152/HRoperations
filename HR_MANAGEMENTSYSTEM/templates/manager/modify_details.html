@@ -1,0 +1,114 @@
+{% extends 'manager/recruitment_page.html' %}
+{% block bodys %}
+    <br>
+    <form action="{%url 'get_opp_details' %}" method="post">
+        {% csrf_token %}
+             <input type="number" placeholder="oppertunity code" name="t1"><br><br>
+             <button type="submit" class="btn btn-secondary">Getdetails</button>
+     </form>
+    <BR><br>
+
+    {% if form %}
+
+      <form action="#" method="post">
+      {% csrf_token %}
+      <div class="container">
+          <div class="row">
+              <div class="col">
+                  <label for="code">Oppertunitycode</label>
+              </div>
+              <div class="col">
+
+                  <input value="{{ form.oppertunitycode }}" id="code" name="t1" readonly>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col">
+                  <label for="qa">Qualification</label>
+              </div>
+              <div class="col">
+
+                  <input value="{{ form.qualification }}" id="qa" name="t2" >
+              </div>
+          </div>
+          <div class="row">
+              <div class="col">
+                  <label for="st">Startregistration</label>
+              </div>
+              <div class="col">
+
+                  <input value="{{ form.startregistration }}" id="st" name="t3" >
+              </div>
+          </div>
+          <div class="row">
+              <div class="col">
+                 <label for="ag">Agelimit</label>
+              </div>
+              <div class="col">
+
+                  <input value="{{ form.agelimit }}" id="ag" name="t4" >
+              </div>
+          </div>
+          <div class="row">
+              <div class="col">
+                   <label>Lastregistration</label>
+              </div>
+              <div class="col">
+
+                  <input value="{{ form.lastregistration }}" name="t5" >
+              </div>
+          </div>
+          <div class="row">
+              <div class="col">
+                  <label>Departmentid</label>
+              </div>
+              <div class="col">
+
+                  <input value="{{ form.departmentid }}" name="t6" >
+              </div>
+          </div>
+          <div class="row">
+              <div class="col">
+                  <label>Positions</label>
+              </div>
+              <div class="col">
+
+                  <input value="{{ form.positions }}" name="t7" >
+              </div>
+          </div>
+          <div class="row">
+              <div class="col">
+                     <label>Description</label>
+              </div>
+              <div class="col">
+
+                  <input value="{{ form.description }}" name="t8" >
+              </div>
+          </div>
+          <div class="row">
+              <div class="col">
+                  <label>Responsibilities</label>
+              </div>
+              <div class="col">
+
+                  <input value="{{ form.responsibilities }}" name="t9" >
+              </div>
+          </div>
+          <div class="row">
+              <div class="col">
+                  <label>Contactno</label>
+              </div>
+              <div class="col">
+
+                  <input value="{{ form.contactno }}" name="t10" >
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-2">
+                  <button type="submit">Update</button>
+              </div>
+          </div>
+      </div>
+    </form>
+    {% endif %}
+{% endblock %}

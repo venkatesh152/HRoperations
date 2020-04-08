@@ -1,0 +1,44 @@
+{% extends 'CommoManager.html' %}
+
+{% block sidebar %}
+    <div class="container-fluid">
+
+{#     style="margin: 6px; border: 8px solid blue; border-radius: 10px; padding: 8px"#}
+
+        <div class="row">
+           <div class="col-5" style="height: 60px;background-color:lightgreen">
+               <a href="{% url 'recruitment_details' %}">
+                 New Recruitment Details
+               </a>
+           </div>
+
+        </div>
+         <div class="row">
+           <div class="col-5" style="height: 50px;background-color:lightgoldenrodyellow">
+             <a href="{% url 'modify_details' %}">
+              Modifying Recruitment Details
+             </a>
+           </div>
+        </div>
+        <div class="row">
+           <div class="col-5" style="height: 50px;background-color:lightblue">
+               <a href="{% url 'delete_details' %}">
+                  Deleting Recruitment Details
+               </a>
+           </div>
+        </div>
+        <div class="row">
+           <div class="col-5" style="height: 50px;background-color:lightcoral">
+               <a href="">
+                  Back
+               </a>
+           </div>
+        </div>
+
+     </div>
+
+
+{% endblock %}
+{% block bodys %}
+{#   <div class="container-fluid" style="margin: 6px; border: 8px solid blue; border-radius: 10px; padding: 8px">#}
+{% endblock %}

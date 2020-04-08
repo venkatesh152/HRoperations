@@ -1,0 +1,24 @@
+{% extends 'HRadmin/commonADMIN.html' %}
+{% block Admin_body %}
+     <table align="center" border="2">
+
+      <tr>
+          <th>EMPLOYEEID</th>
+          <th>EMPLOYEEINAME</th>
+          <th>DESIGNATION</th>
+
+      </tr>
+    {% for x in form %}
+        <tr>
+          <td>
+              <a href="{% url 'update_employee2' %}?id={{ x.id }}">
+                {{ x.id }}
+              </a>
+          </td>
+          <td>{{ x.name }}</td>
+          <td>{{ x.desgination }}</td>
+
+      </tr>
+    {% endfor %}
+    </table>
+{% endblock %}

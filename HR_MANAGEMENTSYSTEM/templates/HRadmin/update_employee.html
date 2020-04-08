@@ -1,0 +1,51 @@
+{% extends 'HRadmin/commonADMIN.html' %}
+{% block Admin_body %}
+    <h1 align="center">Update Page</h1>
+    <form action="{% url 'update' %}" method="post">
+      {% csrf_token %}
+        <table align="center" border="0">
+          <tr>
+              <td>
+                  <input type="number" class="form-control"  value="{{ form.id }}" name="t1" readonly>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <input type="text" class="form-control" value="{{ form.name }}" name="t2">
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <select name="t3">
+                      <option>{{ form.desgination }}</option>
+                      <option>MANAGER</option>
+                      <option>HRhead</option>
+                      <option>INTERVIWER</option>
+                      <option>EMPOYEE</option>
+                  </select>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <input type="text" class="form-control" value="{{ form.address }}" name="t4">
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <input type="number" class="form-control" value="{{ form.contact }}" name="t5">
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <input type="email" class="form-control" value="{{ form.email }}" name="t6">
+              </td>
+          </tr>
+          <tr>
+              <td align="center">
+                  <button type="submit" class="btn btn-primary">Update</button>
+              </td>
+          </tr>
+      </table>
+
+    </form>
+{% endblock %}

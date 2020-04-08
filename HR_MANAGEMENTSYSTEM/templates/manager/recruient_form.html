@@ -1,0 +1,8 @@
+{% extends 'manager/recruitment_page.html' %}
+{% block bodys %}
+   <form action="{% url 'save_details' %}" method="post">
+      {% csrf_token %}
+          {{ form.as_p }}
+         <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+{% endblock %}

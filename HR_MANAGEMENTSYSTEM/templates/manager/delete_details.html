@@ -1,0 +1,30 @@
+{% extends 'manager/recruitment_page.html' %}
+{% block bodys %}
+    <form action="{% url 'delete_recruitment' %}" method="post">
+       {% csrf_token %}
+       <table align="center" border="2">
+           <tr>
+               <TH></TH>
+               <th>OPP_code</th>
+               <th>Qualification</th>
+               <th>Starting_Date</th>
+               <th>Age_Limit</th>
+
+           </tr>
+           {% for x in form %}
+               <tr>
+                   <th><input type="checkbox" value="{{ x.oppertunitycode }}" name="t1"></th>
+                   <th>{{ x.oppertunitycode }}</th>
+                   <th>{{ x.qualification }}</th>
+                   <th>{{ x.startregistration }}</th>
+                   <th>{{ x.agelimit }}</th>
+               </tr>
+           {% endfor %}
+           <tr >
+               <th colspan="5" style="text-align: center">
+                   <button type="submit" class="btn btn-danger">Delete</button>
+               </th>
+           </tr>
+       </table>
+    </form>
+{% endblock %}

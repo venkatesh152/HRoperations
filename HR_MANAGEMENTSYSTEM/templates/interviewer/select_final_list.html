@@ -1,0 +1,18 @@
+{% extends 'commonInterviewer.html' %}
+{% block bodys%}
+    <div style="margin: 6px; border: 2px solid blue; border-radius: 20px; padding: 8px">
+        <form action="#" method="post">
+            {% csrf_token %}
+           <h4 style="text-align: center">
+              Select An Applicant ID : <select style="font-size: large;text-align: center" name="t1">
+                                          <option>------</option>
+                                           {% for x in am %}
+                                               <option>{{ x.id }}</option>
+                                           {% endfor %}
+                                       </select>
+                                        <br><br>
+                                       <button type="submit" class="btn btn-warning">Getdetails</button>
+          </h4>
+        </form>
+    </div>
+{% endblock %}
